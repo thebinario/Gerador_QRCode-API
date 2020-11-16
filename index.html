@@ -34,7 +34,7 @@
     var ElemIframe = document.querySelector("iframe");
     var ElemInput = document.querySelector("input#text");
     function GerarCode(p) {
-        ElemIframe.src = "http://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" + ElemInput.value;   
+        ElemIframe.src = "https://chart.apis.google.com/chart?cht=qr&chl=" + ElemInput.value + "&chs=250x250";   
     }
 </script>
 </html>

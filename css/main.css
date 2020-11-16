@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+.app{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.search input#text{
+    width: 400px;
+    margin-top: 100px;
+}
+.card{
+    text-align: center;
+    border: #cddc39 solid 1px;
+    height: 350px;
+    padding:  40px;
+}
+
+.input-group.md-form.form-sm.form-1 input{
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+  .input-group.md-form.form-sm.form-2 input {
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+  .input-group.md-form.form-sm.form-2 input.red-border {
+    border: 1px solid #ef9a9a;
+  }
+  .input-group.md-form.form-sm.form-2 input.lime-border {
+    border: 1px solid #cddc39;
+  }
+  .input-group.md-form.form-sm.form-2 input.amber-border {
+    border: 1px solid #ffca28;
+  }

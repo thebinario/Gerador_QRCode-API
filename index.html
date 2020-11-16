@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador qr-code</title>
+    <link rel="stylesheet" href="./css/main.css">
+        <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="app">
+        <div class="container">
+            <form class="input-group md-form form-sm form-2 pl-0">
+                <input id="text" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button type="button" class="btn btn-elegant btn-rounded btn-sm my-0" onclick="GerarCode()">Search</button>
+              </form>
+    
+            <hr>
+            <div class="card"  style="align-items: center;">
+                <iframe  frameborder="0"  height="100%"></iframe>
+            </div>
+        </div>
+    </main>
+    
+</body>
+<script>
+    var ElemIframe = document.querySelector("iframe");
+    var ElemInput = document.querySelector("input#text");
+    function GerarCode(p) {
+        ElemIframe.src = "http://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" + ElemInput.value;   
+    }
+</script>
+</html>

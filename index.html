@@ -18,23 +18,29 @@
     <main class="app">
         <div class="container">
             <form class="input-group md-form form-sm form-2 pl-0">
-                <input id="text" class="form-control mr-sm-2" type="text" placeholder="Ex: wwww.google.com" aria-label="Gerar">
+                <input id="text" class="form-control mr-sm-2" type="text" placeholder="Ex: www.google.com" aria-label="Gerar">
                 <button type="button" class="btn btn-elegant btn-rounded btn-sm my-0" onclick="GerarCode()">Gerar</button>
               </form>
-    
+              <button type="button" class="btn btn-dark" onclick="GerarCode('200x200')">200x200</button>
+              <button type="button" class="btn btn-dark" onclick="GerarCode('250x250')">250x250</button>
+              <button type="button" class="btn btn-dark" onclick="GerarCode('275x275')">275x275</button>
+              <button type="button" class="btn btn-dark" onclick="GerarCode('300x300')">300x300</button>
+              <button type="button" class="btn btn-dark" onclick="GerarCode('350x350')">350x350</button>
+              <button type="button" class="btn btn-dark" onclick="GerarCode('400x400')">400x400</button>
+              
             <hr>
             <div class="card"  style="align-items: center;">
-                <iframe  frameborder="0"  height="100%"></iframe>
+                    <img src="" alt="">
             </div>
         </div>
     </main>
     
 </body>
 <script>
-    var ElemIframe = document.querySelector("iframe");
+    var ElemIframe = document.querySelector("img");
     var ElemInput = document.querySelector("input#text");
-    function GerarCode(p) {
-        ElemIframe.src = "https://chart.apis.google.com/chart?cht=qr&chl=" + ElemInput.value + "&chs=250x250";   
+    function GerarCode(tam = '250x250') {
+        ElemIframe.src = "https://chart.apis.google.com/chart?cht=qr&chl=" + ElemInput.value + "&chs=" + tam;   
     }
 </script>
 </html>
